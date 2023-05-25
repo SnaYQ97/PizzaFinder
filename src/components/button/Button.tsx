@@ -1,6 +1,7 @@
 import {Button as MuiButton} from "@mui/material";
 import {ReactNode} from "react";
 import useStyles from './button.style.ts';
+
 interface Props {
     variant?: 'contained';
     onClick?: () => void;
@@ -8,14 +9,14 @@ interface Props {
 }
 
 const Button = (props: Props) => {
-    const { classes } = useStyles();
-    const {variant, onClick, children } = props;
+    const {classes} = useStyles();
+    const {variant, onClick, children} = props;
     return (
         <MuiButton
             className={classes.root}
             onClick={onClick}
             variant={variant}>
-                {children}
+            {children}
         </MuiButton>
     );
 };
