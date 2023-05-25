@@ -1,7 +1,4 @@
-import './App.css';
 import HomePage from './components/pages';
-
-
 
 const App = () => (
   <>
