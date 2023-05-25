@@ -1,6 +1,6 @@
 import { Button as MuiButton } from '@mui/material';
 import { ReactNode } from 'react';
-import useStyles from './Button.style.ts';
+import useStyles from './Button.styles.ts';
 
 interface Props {
   variant?: 'contained';
