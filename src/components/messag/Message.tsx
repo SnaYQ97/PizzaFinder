@@ -1,6 +1,6 @@
 import { Button as MuiButton } from '@mui/material/';
 import { ReactNode } from 'react';
-import useStyles from './Button.styles.ts';
+import useStyles from './Message.styles.ts';
 
 interface Props {
   variant?: 'contained';
@@ -8,7 +8,7 @@ interface Props {
   children?: ReactNode;
 }
 
-const Button = (props: Props) => {
+const Message = (props: Props) => {
   const { classes } = useStyles();
   const { variant, onClick, children } = props;
   return (
@@ -21,7 +21,7 @@ const Button = (props: Props) => {
   );
 };
 
-export default Button;
+export default Message;
 
 
 /*

@@ -11,17 +11,19 @@ const styles = {
     alignItems: 'center',
     padding: '12px 41px',
     gap: '8px',
-    width: '198px',
-    height: '48px',
     /* Shadow/xs */
+    borderRadius: '50%',
     boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-    borderRadius: '39px',
     /* Inside auto layout */
     flex: '1',
     order: 1,
     flexGrow: 0,
-    position: 'absolute',
-    top: '185px',
+
+    position: 'fixed',
+    top: 'calc(101% - 128px)',
+    right: '20px',
+    width: '90px',
+    height: '90px',
   }
 };
 
