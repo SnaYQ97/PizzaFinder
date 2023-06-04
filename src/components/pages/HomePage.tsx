@@ -1,79 +1,133 @@
-import React, {useState} from 'react';
-
 import useStyles from './HomePage.styles.ts';
-import pizzaLogo from '../../assets/images/pizza.png';
-import miniImage from '../../assets/images/mini.png';
-import tomato1Image from '../../assets/images/tomato1.png';
-import tomato2Image from '../../assets/images/tomato2.png';
-import bazilImage from '../../assets/images/bazil.png';
-import {Button} from "../button";
-import {CustomTextField} from "../searchBar";
-import {IconButton, InputAdornment, TextField} from "@mui/material";
+import tomato from '../../assets/images/Tomato.png';
+import bazil from '../../assets/images/Bazil.png';
+import { Button } from '../button';
+import { CustomTextField } from '../searchBar';
+import { InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import Message1 from "../messag/Message";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
+import DecoArrow from '../../assets/icons/DecoArrow.svg';
 
 const HomePage = () => {
-  const {classes} = useStyles();
-
-
+  const { classes } = useStyles();
+  console.log(classes);
   return (
-      <>
-        <img src={miniImage} alt="Miniature" className={classes.miniImage}/>
-        <div className={classes.pizzaFinder}>PIZZA FINDER</div>
+    <>
+      SOME TEXT
+      <img src={tomato} alt="Miniature"/>
+      <img src={tomato} alt="Miniature"/>
+      <img src={bazil} alt="Miniature"/>
 
-        <a href="https://react.dev" target="_blank">
-          <img src={pizzaLogo} className="logo react" alt="React logo"/>
-        </a>
-        <img src={tomato1Image} alt="Miniature" className={classes.tomato1}/>
-        <img src={tomato2Image} alt="Miniature" className={classes.tomato2}/>
-        <img src={bazilImage} alt="Miniature" className={classes.weed}/>
-        <div className={classes.container}>
-          <div className={classes.title}>Odkryj najlepsze pizzowe smaki w Twoim mieście!</div>
-
-          <Button> Znajdź pizze</Button>
-
-          <div className={classes.subtitle}>Odkryj idealną pizzę w Twojej okolicy</div>
-          <div className={classes.subtitle2}>Z Pizza Finder możesz eksplorować różnorodne menu z lokalnych pizzerii.
-            Niech Twoje kubki smakowe przeżyją prawdziwą ucztę!
+      {/* Hero section 100vh  390x844 */}
+      <section>
+        <div>
+          <div>
+            Odkryj najlepsze pizzowe smaki w Twoim mieście!
           </div>
-          <div className={classes.title3}>Znajdź swoją pizzę!</div>
-          <div className={classes.title2}>Menu wielu pizzerri w jednym miejscu</div>
-          <div className={classes.subtitle3}>Wpisz nazwę swojego miasta i przejdź do naszego Findera, który pomoże Ci
-            znaleźć Twoją ulubioną pizzę w okolicy.
+          <Button>Znajdź pizze</Button>
+          <div>
+            Odkryj idealną pizzę w Twojej okolicy
           </div>
-          <div className={classes.subtitle4}>Wybierz Miasto</div>
+          <DecoArrow />
+        </div>
+      </section>
+      {/* Second Section 100vh 844 + 844 */}
+      <section>
+        {/* Typography Header + SubHeader 2lvl */}
+        <div>
+          <div>
+            Menu wielu pizzerri w jednym miejscu
+          </div>
+          <div>
+            Z Pizza Finder możesz eksplorować różnorodne menu z
+            lokalnych pizzerii. Niech Twoje kubki smakowe przeżyją
+            prawdziwą ucztę!
+          </div>
+        </div>
+        {/* Text with Location Field */}
+        <div>
+          {/* Typography Header + SubHeader 3lvl */}
+          <div>
+            <div>Znajdź swoją pizzę!</div>
+            <div>
+              Wpisz nazwę swojego miasta i przejdź do
+              naszego Findera, który pomoże Ci znaleźć
+              Twoją ulubioną pizzę w okolicy.
+            </div>
+          </div>
+          <div>Wybierz Miasto</div>
+          {/*
+            TODO: Move it as reusable component Label + Field
+            https://github.com/SnaYQ97/PizzaFinder/issues/10
+           */}
           <CustomTextField
-              defaultValue="Warszawa"
-              variant="outlined"
-              InputProps={{
-                endAdornment: (
-                    <InputAdornment position="end">
-                      <SearchIcon className={classes.WhiteSearchIcon}/>
-                    </InputAdornment>
-                ),
-              }}
+            defaultValue="Warszawa"
+            variant="outlined"
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <SearchIcon/>
+                </InputAdornment>
+              ),
+            }}
           />
-          <div className={classes.subtitle5}>Znajdź nas:
+        </div>
+        {/* Text with Location Field + Contact Button */}
+        <div>
+          {/* Typography Header + SubHeader 3lvl */}
+          <div>
+            <div>Znadź swoją pizzę</div>
+            <div>
+              Wpisz nazwę swojego miasta i przejdź do
+              naszego Findera, który pomoże Ci
+              znaleźć Twoją ulubioną pizzę w okolicy.
+            </div>
           </div>
-          <FacebookIcon className={classes.FacebookIcon}/>
-          <InstagramIcon className={classes.InstagramIcon}/>
+          <Button>Kontakt</Button>
         </div>
-        <div className={classes.container2}>
-
-          <div className={classes.title4}>Firma</div>
-          <p style={{position: 'absolute', left: '9px', color: 'white'}}>O nas </p>
-          <p style={{position: 'absolute', top: '130px', left: '9px', color: 'white'}}>Polityka prywatności </p>
-          <p style={{position: 'absolute', top: '170px', left: '9px', color: 'white'}}>Reklamujcie się z nami</p>
-
+      </section>
+      {/*
+            Logo + Motto + Socials
+            TODO: Create Reusable Footer Component
+            https://github.com/SnaYQ97/PizzaFinder/issues/6
+      */}
+      <section>
+        <div>
+          {/* Logo Component */}
+          <div>Motto</div>
+          <FacebookIcon/>
+          <InstagramIcon/>
         </div>
-
-
-        <Message1><img src='src/assets/images/message.png' alt="Miniature"/></Message1>
-
-      </>
+        {/* Website Map */}
+        <div>
+          {/* Links Header */}
+          <div>Firma</div>
+          {/* Links */}
+          <p>O nas </p>
+          <p>Polityka prywatności </p>
+        </div>
+        <div>
+          {/* Links Header */}
+          <div>Współpraca</div>
+          {/* Links */}
+          <p>O nas </p>
+          <p>Polityka prywatności </p>
+        </div>
+        <div>
+          {/* Links Header */}
+          <div>Kontakt</div>
+          {/* Links */}
+          <p>O nas </p>
+          <p>Polityka prywatności </p>
+        </div>
+      </section>
+      {/*
+            Chat Button
+            TODO: Create Chat Button
+            https://github.com/SnaYQ97/PizzaFinder/issues/9
+      */}
+    </>
   );
 };
 
