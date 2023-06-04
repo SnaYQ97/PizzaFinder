@@ -1,5 +1,4 @@
 import HomePage from './components/pages';
-
 const App = () => (
   <>
     <HomePage/>
