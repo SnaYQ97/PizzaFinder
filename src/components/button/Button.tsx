@@ -6,6 +6,7 @@ interface Props {
   variant?: 'contained';
   onClick?: () => void;
   children?: ReactNode;
+  endIcon?: ReactNode;
 }
 
 const Button = (props: Props) => {
@@ -15,7 +16,12 @@ const Button = (props: Props) => {
     <MuiButton
       className={classes.root}
       onClick={onClick}
-      variant={variant}>
+      variant={variant}
+      disableRipple
+      disableFocusRipple
+      disableElevation
+      {...( props.endIcon && { endIcon: props.endIcon })}
+    >
       {children}
     </MuiButton>
   );
