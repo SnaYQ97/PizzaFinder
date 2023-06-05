@@ -5,16 +5,16 @@ import { Button } from '../button';
 import { CustomTextField } from '../searchBar';
 import { InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
+
 import DecoArrow from '../../assets/icons/DecoArrow.svg';
+import Footer from '../footer/Footer.tsx';
 
 const HomePage = () => {
   const { classes } = useStyles();
   console.log(classes);
   return (
     <>
-      SOME TEXT
+        SOME TEXT
       <img src={tomato} alt="Miniature"/>
       <img src={tomato} alt="Miniature"/>
       <img src={bazil} alt="Miniature"/>
@@ -23,13 +23,13 @@ const HomePage = () => {
       <section>
         <div>
           <div>
-            Odkryj najlepsze pizzowe smaki w Twoim mieście!
+              Odkryj najlepsze pizzowe smaki w Twoim mieście!
           </div>
           <Button>Znajdź pizze</Button>
           <div>
-            Odkryj idealną pizzę w Twojej okolicy
+              Odkryj idealną pizzę w Twojej okolicy
           </div>
-          <DecoArrow />
+          <DecoArrow/>
         </div>
       </section>
       {/* Second Section 100vh 844 + 844 */}
@@ -37,12 +37,12 @@ const HomePage = () => {
         {/* Typography Header + SubHeader 2lvl */}
         <div>
           <div>
-            Menu wielu pizzerri w jednym miejscu
+              Menu wielu pizzerri w jednym miejscu
           </div>
           <div>
-            Z Pizza Finder możesz eksplorować różnorodne menu z
-            lokalnych pizzerii. Niech Twoje kubki smakowe przeżyją
-            prawdziwą ucztę!
+              Z Pizza Finder możesz eksplorować różnorodne menu z
+              lokalnych pizzerii. Niech Twoje kubki smakowe przeżyją
+              prawdziwą ucztę!
           </div>
         </div>
         {/* Text with Location Field */}
@@ -51,9 +51,9 @@ const HomePage = () => {
           <div>
             <div>Znajdź swoją pizzę!</div>
             <div>
-              Wpisz nazwę swojego miasta i przejdź do
-              naszego Findera, który pomoże Ci znaleźć
-              Twoją ulubioną pizzę w okolicy.
+                Wpisz nazwę swojego miasta i przejdź do
+                naszego Findera, który pomoże Ci znaleźć
+                Twoją ulubioną pizzę w okolicy.
             </div>
           </div>
           <div>Wybierz Miasto</div>
@@ -79,12 +79,11 @@ const HomePage = () => {
           <div>
             <div>Znadź swoją pizzę</div>
             <div>
-              Wpisz nazwę swojego miasta i przejdź do
-              naszego Findera, który pomoże Ci
-              znaleźć Twoją ulubioną pizzę w okolicy.
+                Wpisz nazwę swojego miasta i przejdź do
+                naszego Findera, który pomoże Ci
+                znaleźć Twoją ulubioną pizzę w okolicy.
             </div>
           </div>
-          <Button>Kontakt</Button>
         </div>
       </section>
       {/*
@@ -94,41 +93,18 @@ const HomePage = () => {
       */}
       <section>
         <div>
-          {/* Logo Component */}
-          <div>Motto</div>
-          <FacebookIcon/>
-          <InstagramIcon/>
-        </div>
-        {/* Website Map */}
-        <div>
-          {/* Links Header */}
-          <div>Firma</div>
-          {/* Links */}
-          <p>O nas </p>
-          <p>Polityka prywatności </p>
-        </div>
-        <div>
-          {/* Links Header */}
-          <div>Współpraca</div>
-          {/* Links */}
-          <p>O nas </p>
-          <p>Polityka prywatności </p>
-        </div>
-        <div>
-          {/* Links Header */}
-          <div>Kontakt</div>
-          {/* Links */}
-          <p>O nas </p>
-          <p>Polityka prywatności </p>
+          <Footer></Footer>
         </div>
       </section>
       {/*
             Chat Button
             TODO: Create Chat Button
             https://github.com/SnaYQ97/PizzaFinder/issues/9
-      */}
+      */
+      }
     </>
-  );
+  )
+  ;
 };
 
 export default HomePage;

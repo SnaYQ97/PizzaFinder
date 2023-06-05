@@ -1,7 +1,10 @@
 import { makeStyles } from 'tss-react/mui';
 
 const styles= {
-  container: {}
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+  }
 };
 export default makeStyles()(styles);
 
