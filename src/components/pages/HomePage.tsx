@@ -11,7 +11,6 @@ import cx from 'classnames';
 
 const HomePage = () => {
   const { classes } = useStyles();
-  console.log(classes);
   return (
     <>
       <section className={cx(classes.section, classes.heroSection)}>
@@ -86,7 +85,7 @@ const HomePage = () => {
             TODO: Move it as reusable component Label + Field
             https://github.com/SnaYQ97/PizzaFinder/issues/7
            */}
-          <div className={classes.locationLabel}>Wybierz Miasto</div>
+          <div>Wybierz Miasto</div>
           <CustomTextField
             defaultValue="Warszawa"
             variant="outlined"
