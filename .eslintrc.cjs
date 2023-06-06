@@ -29,5 +29,6 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 'off', // Wyłączenie wymogu określania typów zwracanych przez funkcje
         'react/react-in-jsx-scope': 'off', // Disable the 'react/react-in-jsx-scope' rule
         'object-curly-spacing': ['error', 'always'], // Enforce spaces between curly braces in imports
+        'no-multiple-empty-lines': ["error", { "max": 1, "maxEOF": 0 }]
     },
 }
