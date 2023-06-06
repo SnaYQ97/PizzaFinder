@@ -3,21 +3,24 @@ import { makeStyles } from 'tss-react/mui';
 const styles = {
   root: {
     backgroundColor: '#FF5500',
+    fontSize: 16,
+    lineHeight: 1.25,
     display: 'flex',
-    color: 'white',
-    fontFamily: 'Inter',
+    fontFamily: '\'Inter\', sans-serif',
     justifyContent: 'center',
     alignItems: 'center',
     padding: '12px 41px',
-    gap: '8px',
-    width: '198px',
-    height: '48px',
-    boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
-    borderRadius: '39px',
-    flex: 1,
-    order: 1,
-    flexGrow: 0,
-  }
+    borderRadius: '41px',
+    fontWeight: 700,
+    letterSpacing: '0.03em',
+    color: '#F7F7F7',
+    '&:focus': {
+      outline: 'unset',
+    },
+    '&:focus-visible': {
+      outline: 'unset',
+    }
+  },
 };
 
 export default makeStyles()(styles);

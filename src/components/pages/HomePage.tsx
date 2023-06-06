@@ -1,66 +1,91 @@
 import useStyles from './HomePage.styles.ts';
 import tomato from '../../assets/images/Tomato.png';
-import bazil from '../../assets/images/Bazil.png';
+import pizzaHero from '../../assets/images/PizzaHero.png';
 import { Button } from '../button';
 import { CustomTextField } from '../searchBar';
 import { InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-
 import DecoArrow from '../../assets/icons/DecoArrow.svg';
 import Footer from '../footer/Footer.tsx';
+import cx from 'classnames';
 
 const HomePage = () => {
   const { classes } = useStyles();
-  console.log(classes);
   return (
     <>
-        SOME TEXT
-      <img src={tomato} alt="Miniature"/>
-      <img src={tomato} alt="Miniature"/>
-      <img src={bazil} alt="Miniature"/>
-
-      {/* Hero section 100vh  390x844 */}
-      <section>
-        <div>
-          <div>
-              Odkryj najlepsze pizzowe smaki w Twoim mieście!
+      <section className={cx(classes.section, classes.heroSection)}>
+        <div className={classes.heroContainer}>
+          <div className={classes.heroImagesBox}>
+            <img
+              src={tomato}
+              className={cx(
+                classes.heroDecoTomato,
+                classes.heroDecoTomatoLeft
+              )}
+              alt="Miniature"
+            />
+            <img
+              src={pizzaHero}
+              className={classes.heroDecoPizza}
+              alt="Pizza"
+            />
+            <img
+              src={tomato}
+              className={cx(
+                classes.heroDecoTomato,
+                classes.heroDecoTomatoRight
+              )}
+              alt="Miniature"/>
           </div>
-          <Button>Znajdź pizze</Button>
-          <div>
-              Odkryj idealną pizzę w Twojej okolicy
-          </div>
-          <DecoArrow/>
-        </div>
-      </section>
-      {/* Second Section 100vh 844 + 844 */}
-      <section>
-        {/* Typography Header + SubHeader 2lvl */}
-        <div>
-          <div>
-              Menu wielu pizzerri w jednym miejscu
-          </div>
-          <div>
-              Z Pizza Finder możesz eksplorować różnorodne menu z
-              lokalnych pizzerii. Niech Twoje kubki smakowe przeżyją
-              prawdziwą ucztę!
-          </div>
-        </div>
-        {/* Text with Location Field */}
-        <div>
-          {/* Typography Header + SubHeader 3lvl */}
-          <div>
-            <div>Znajdź swoją pizzę!</div>
-            <div>
-                Wpisz nazwę swojego miasta i przejdź do
-                naszego Findera, który pomoże Ci znaleźć
-                Twoją ulubioną pizzę w okolicy.
+          <div className={cx(classes.textBox, classes.heroTextBox)}>
+            <div className={classes.headerHero}>
+              Pizza Finder
+            </div>
+            <div className={classes.subheaderHero}>
+              Znajdź swoją pizzę
             </div>
           </div>
-          <div>Wybierz Miasto</div>
+        </div>
+        <div className={cx(classes.flexColumnCentered, classes.ctaContainer)}>
+          <div className={classes.ctaHeader}>
+            Odkryj najlepsze pizzowe smaki w Twoim mieście!
+          </div>
+          <div className={classes.ctaButtonBox}>
+            <div className={classes.ctaButtonDeco}></div>
+            <Button>Znajdź pizze</Button>
+            <div className={classes.ctaButtonDeco}></div>
+          </div>
+          <div className={classes.ctaSubheader}>
+            Odkryj idealną pizzę w Twojej okolicy
+          </div>
+          <DecoArrow className={classes.ctaSubheaderDeco} />
+        </div>
+      </section>
+      <section className={cx(classes.section, classes.mainSection)}>
+        <div className={cx(classes.textBox, classes.mainTextBox)}>
+          <div className={classes.mainSectionHeader}>
+            Menu wielu pizzerri w jednym miejscu
+          </div>
+          <div className={classes.mainSectionSubheader}>
+            Z Pizza Finder możesz eksplorować różnorodne menu z
+            lokalnych pizzerii. Niech Twoje kubki smakowe przeżyją
+            prawdziwą ucztę!
+          </div>
+        </div>
+        <div className={classes.flexColumnCentered}>
+          <div className={cx(classes.textBox, classes.locationBox)}>
+            <div className={classes.header3}>Znajdź swoją pizzę!</div>
+            <div className={classes.subheader3}>
+              Wpisz nazwę swojego miasta i przejdź do
+              naszego Findera, który pomoże Ci znaleźć
+              Twoją ulubioną pizzę w okolicy.
+            </div>
+          </div>
           {/*
             TODO: Move it as reusable component Label + Field
-            https://github.com/SnaYQ97/PizzaFinder/issues/10
+            https://github.com/SnaYQ97/PizzaFinder/issues/7
            */}
+          <div>Wybierz Miasto</div>
           <CustomTextField
             defaultValue="Warszawa"
             variant="outlined"
@@ -73,29 +98,23 @@ const HomePage = () => {
             }}
           />
         </div>
-        {/* Text with Location Field + Contact Button */}
-        <div>
-          {/* Typography Header + SubHeader 3lvl */}
-          <div>
-            <div>Znadź swoją pizzę</div>
-            <div>
-                Wpisz nazwę swojego miasta i przejdź do
-                naszego Findera, który pomoże Ci
-                znaleźć Twoją ulubioną pizzę w okolicy.
-            </div>
+        <div className={cx(classes.section, classes.contactContainer)}>
+          <div className={classes.header3}>Wspópracjuj z nami!</div>
+          <div className={classes.subheader3}>
+              Wpisz nazwę swojego miasta i przejdź do naszego Findera, który
+              pomoże Ci znaleźć Twoją ulubioną pizzę w okolicy.
           </div>
+          <Button>Kontakt</Button>
         </div>
       </section>
-      <Footer></Footer>
+      <Footer/>
       {/*
             Chat Button
             TODO: Create Chat Button
             https://github.com/SnaYQ97/PizzaFinder/issues/9
-      */
-      }
+      */}
     </>
-  )
-  ;
+  );
 };
 
 export default HomePage;
