@@ -107,7 +107,7 @@ const HomePage = () => {
           <Button>Kontakt</Button>
         </div>
       </section>
-      <Footer></Footer>
+      <Footer/>
       {/*
             Chat Button
             TODO: Create Chat Button
