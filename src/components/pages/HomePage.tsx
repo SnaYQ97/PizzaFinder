@@ -86,16 +86,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      {/*
-            Logo + Motto + Socials
-            TODO: Create Reusable Footer Component
-            https://github.com/SnaYQ97/PizzaFinder/issues/6
-      */}
-      <section>
-        <div>
-          <Footer></Footer>
-        </div>
-      </section>
+      <Footer></Footer>
       {/*
             Chat Button
             TODO: Create Chat Button
