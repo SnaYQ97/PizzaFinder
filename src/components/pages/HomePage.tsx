@@ -2,9 +2,9 @@ import useStyles from './HomePage.styles.ts';
 import tomato from '../../assets/images/Tomato.png';
 import pizzaHero from '../../assets/images/PizzaHero.png';
 import { Button } from '../button';
-import { CustomTextField } from '../searchBar';
+/*import { CustomTextField } from '../searchBar';
 import { InputAdornment } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from '@mui/icons-material/Search';*/
 import DecoArrow from '../../assets/icons/DecoArrow.svg';
 import Footer from '../footer/Footer.tsx';
 import cx from 'classnames';
@@ -51,9 +51,9 @@ const HomePage = () => {
             Odkryj najlepsze pizzowe smaki w Twoim mieście!
           </div>
           <div className={classes.ctaButtonBox}>
-            <div className={classes.ctaButtonDeco}></div>
+            <div className={classes.ctaButtonDeco} />
             <Button>Znajdź pizze</Button>
-            <div className={classes.ctaButtonDeco}></div>
+            <div className={classes.ctaButtonDeco} />
           </div>
           <div className={classes.ctaSubheader}>
             Odkryj idealną pizzę w Twojej okolicy
@@ -85,7 +85,7 @@ const HomePage = () => {
             TODO: Move it as reusable component Label + Field
             https://github.com/SnaYQ97/PizzaFinder/issues/7
            */}
-          <div>Wybierz Miasto</div>
+          {/*<div>Wybierz Miasto</div>
           <CustomTextField
             defaultValue="Warszawa"
             variant="outlined"
@@ -96,7 +96,7 @@ const HomePage = () => {
                 </InputAdornment>
               ),
             }}
-          />
+          />*/}
         </div>
         <div className={cx(classes.section, classes.contactContainer)}>
           <div className={classes.header3}>Wspópracjuj z nami!</div>
