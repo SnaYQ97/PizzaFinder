@@ -72,7 +72,9 @@ const HomePage = () => {
         </div>
         <div className={classes.flexColumnCentered}>
           <div className={cx(classes.textBox, classes.locationBox)}>
-            <div className={classes.header3}>Znajdź swoją pizzę!</div>
+            <div className={classes.header3}>
+              Znajdź swoją pizzę!
+            </div>
             <div className={classes.subheader3}>
               Wpisz nazwę swojego miasta i przejdź do
               naszego Findera, który pomoże Ci znaleźć
