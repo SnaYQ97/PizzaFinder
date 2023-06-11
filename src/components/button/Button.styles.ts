@@ -14,6 +14,7 @@ const styles = {
     fontWeight: 700,
     letterSpacing: '0.03em',
     color: '#F7F7F7',
+    width: 'fit-content',
     '&:focus': {
       outline: 'unset',
     },

@@ -2,6 +2,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import useStyles from './Footer.styles.ts';
 import { Logo } from '../logo';
+import cx from 'classnames';
 
 const Footer = () => {
   const { classes } = useStyles();
@@ -37,7 +38,12 @@ const Footer = () => {
         <div className={classes.linkBox}>
           {/* Links Header */}
           <div className={classes.title}>Kontakt</div>
-          {/* Links */}
+          <a
+            href={'mailto:contact@pizzafinder.pl'}
+            className={cx(classes.subtitle, classes.mailLink)}
+          >
+                contact@pizzafinder.pl
+          </a>
         </div>
       </div>
       <div className={classes.footerRights}>

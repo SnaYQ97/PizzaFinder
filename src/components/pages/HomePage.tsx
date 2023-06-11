@@ -83,10 +83,10 @@ const HomePage = () => {
           </div>
         </div>
         <div className={classes.subheader3}>
-          <div className={classes.subheader3}>Wybierz Miasto</div>
+          <div className={classes.citySelectorLabel}>Wybierz Miasto</div>
           <CitySelector/>
         </div>
-        <div className={cx(classes.section, classes.contactContainer)}>
+        <div className={cx(classes.contactContainer)}>
           <div className={classes.header3}>Współpracjuj z nami!</div>
           <div className={classes.subheader3}>
             I wspólnie dzielmy się pasją do pizzy

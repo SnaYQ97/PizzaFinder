@@ -16,12 +16,16 @@ const styles =({
   },
   linksContainer: {
     display: 'flex',
-    flexGrow: 1,
-    flexWrap: 1,
+    flexGrow: '1',
+    flexWrap: 'wrap',
     margin: '24px 0 48px',
+    gap: '24px',
+    alignItems: 'space-between',
   },
   linkBox: {
-
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '12px',
   },
   title: {
     fontWeight: 700,
@@ -37,6 +41,10 @@ const styles =({
     letterSpacing: '0.03em',
     maxWidth: '250px',
     color: '#F7F7F7',
+    margin: 'unset',
+  },
+  mailLink: {
+
   },
   titleFoot: {
     fontWeight: 400,
