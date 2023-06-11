@@ -136,12 +136,16 @@ const styles = {
     fontSize: 30,
     lineHeight: 1.25,
     fontWeight: 600,
+    marginTop: '40px',
   },
   subheader3: {
     fontSize: 15,
     lineHeight: 1.25,
     letterSpacing: '0.03em',
+    marginTop: '20px',
+    color: '#F7F7F7',
   },
+
 };
 export default makeStyles()(styles);
 

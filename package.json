@@ -10,11 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.0",
+    "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/inter": "^5.0.2",
     "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.2",
     "classnames": "^2.3.2",
     "eslint-plugin-tss-unused-classes": "^0.0.4",
     "react": "^18.2.0",
@@ -24,8 +23,9 @@
     "vite-plugin-svgr": "^3.2.0"
   },
   "devDependencies": {
+    "@mui/material": "^5.13.4",
     "@svgr/cli": "^8.0.1",
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.2.9",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",

@@ -2,12 +2,10 @@ import useStyles from './HomePage.styles.ts';
 import tomato from '../../assets/images/Tomato.png';
 import pizzaHero from '../../assets/images/PizzaHero.png';
 import { Button } from '../button';
-/*import { CustomTextField } from '../searchBar';
-import { InputAdornment } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';*/
 import DecoArrow from '../../assets/icons/DecoArrow.svg';
 import Footer from '../footer/Footer.tsx';
 import cx from 'classnames';
+import CitySelector from '../citySelector/CitySelector.tsx';
 
 const HomePage = () => {
   const { classes } = useStyles();
@@ -74,35 +72,24 @@ const HomePage = () => {
         </div>
         <div className={classes.flexColumnCentered}>
           <div className={cx(classes.textBox, classes.locationBox)}>
-            <div className={classes.header3}>Znajdź swoją pizzę!</div>
+            <div className={classes.header3}>
+              Znajdź swoją pizzę!
+            </div>
             <div className={classes.subheader3}>
               Wpisz nazwę swojego miasta i przejdź do
               naszego Findera, który pomoże Ci znaleźć
               Twoją ulubioną pizzę w okolicy.
             </div>
           </div>
-          {/*
-            TODO: Move it as reusable component Label + Field
-            https://github.com/SnaYQ97/PizzaFinder/issues/7
-           */}
-          {/*<div>Wybierz Miasto</div>
-          <CustomTextField
-            defaultValue="Warszawa"
-            variant="outlined"
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <SearchIcon/>
-                </InputAdornment>
-              ),
-            }}
-          />*/}
+        </div>
+        <div className={classes.subheader3}>
+          <div className={classes.subheader3}>Wybierz Miasto</div>
+          <CitySelector/>
         </div>
         <div className={cx(classes.section, classes.contactContainer)}>
-          <div className={classes.header3}>Wspópracjuj z nami!</div>
+          <div className={classes.header3}>Współpracjuj z nami!</div>
           <div className={classes.subheader3}>
-              Wpisz nazwę swojego miasta i przejdź do naszego Findera, który
-              pomoże Ci znaleźć Twoją ulubioną pizzę w okolicy.
+            I wspólnie dzielmy się pasją do pizzy
           </div>
           <Button>Kontakt</Button>
         </div>
