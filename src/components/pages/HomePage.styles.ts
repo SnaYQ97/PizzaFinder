@@ -129,6 +129,9 @@ const styles = {
   contactContainer:{
     gap: calcMarginUnits(extraSmallMargin, 4),
     color: '#F7F7F7',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     textAlign: 'center' as const,
     marginTop: calcMarginUnits(smallMargin, 12),
   },
@@ -136,16 +139,20 @@ const styles = {
     fontSize: 30,
     lineHeight: 1.25,
     fontWeight: 600,
-    marginTop: '40px',
   },
   subheader3: {
     fontSize: 15,
     lineHeight: 1.25,
     letterSpacing: '0.03em',
-    marginTop: '20px',
-    color: '#F7F7F7',
   },
-
+  citySelectorLabel: {
+    fontSize: 14,
+    fontWeight: 500,
+    lineHeight: 1.25,
+    letterSpacing: '0.03em',
+    color: '#F7F7F7',
+    marginBottom: calcMarginUnits(smallMargin, 1),
+  }
 };
 export default makeStyles()(styles);
 
