@@ -49,14 +49,14 @@ const HomePage = () => {
             Odkryj najlepsze pizzowe smaki w Twoim mieście!
           </div>
           <div className={classes.ctaButtonBox}>
-            <div className={classes.ctaButtonDeco}></div>
+            <div className={classes.ctaButtonDeco} />
             <Button>Znajdź pizze</Button>
-            <div className={classes.ctaButtonDeco}></div>
+            <div className={classes.ctaButtonDeco} />
           </div>
           <div className={classes.ctaSubheader}>
             Odkryj idealną pizzę w Twojej okolicy
           </div>
-          <DecoArrow className={classes.ctaSubheaderDeco}/>
+          <DecoArrow className={classes.ctaSubheaderDeco} />
         </div>
       </section>
       <section className={cx(classes.section, classes.mainSection)}>

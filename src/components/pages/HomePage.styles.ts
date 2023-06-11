@@ -12,6 +12,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column' as const,
     alignItems: 'center',
+    marginLeft: '24px',
+    marginRight: '24px',
   },
   heroSection: {
     marginBottom: calcMarginUnits(smallMargin, 12),
@@ -109,7 +111,6 @@ const styles = {
     fontSize: 36,
     fontWeight: 600,
     lineHeight: 1.25,
-    letterSpacing: '0.03em',
   },
   mainSectionSubheader: {
     fontSize: 18,
@@ -129,11 +130,11 @@ const styles = {
     gap: calcMarginUnits(extraSmallMargin, 4),
     color: '#F7F7F7',
     textAlign: 'center' as const,
+    marginTop: calcMarginUnits(smallMargin, 12),
   },
   header3: {
     fontSize: 30,
     lineHeight: 1.25,
-    letterSpacing: '0.03em',
     fontWeight: 600,
     marginTop: '40px',
   },
