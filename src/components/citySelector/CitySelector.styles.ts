@@ -2,8 +2,9 @@ import { makeStyles } from 'tss-react/mui';
 
 const styles = ({
   container: {
-    marginBottom: 'theme.spacing(1)',
     display: 'flex',
+    flexDirection: 'column',
+    marginBottom: 'theme.spacing(1)',
     fontFamily: '\'Inter\', sans-serif',
     justifyContent: 'center',
     alignItems: 'center',
@@ -54,7 +55,35 @@ const styles = ({
   },
   notchedOutline: {
     borderColor: 'white',
-  }
+  },
+  option: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '5px 10px',
+  },
+  optionName: {
+    fontWeight: ''
+  },
+  optionDescription: {
+
+  },
+  errorBox: {
+    minHeight: '15px',
+    marginTop: '5px',
+    display: 'flex',
+    gap: 4,
+    width: '100%',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    fontSize: '12px',
+    color: 'red'
+
+  },
+  errorIcon: {
+    fontSize: '12px',
+    fill: 'red',
+  },
+
 });
 
 export default makeStyles()(styles);
