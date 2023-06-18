@@ -1,7 +1,7 @@
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import useStyles from './Footer.styles.ts';
-import { Logo } from '../logo';
+import Logo from '../logo';
 import cx from 'classnames';
 
 const Footer = () => {

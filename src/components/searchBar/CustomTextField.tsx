@@ -1,9 +1,5 @@
-import React from 'react';
 import TextField from '@mui/material/TextField';
-import SearchIcon from '@mui/icons-material/Search';
-import {styled} from '@mui/material/styles';
-import InputAdornment from '@mui/material/InputAdornment';
-
+import { styled } from '@mui/material/styles';
 const CustomTextField = styled(TextField)({
   '& .MuiOutlinedInput-root': {
     background: 'linear-gradient(180deg, #0D1D3E 0%, #071632 100%);',
@@ -38,9 +34,7 @@ const CustomTextField = styled(TextField)({
     },
     '& .defaultValue': {
       color: 'white',
-
     },
-
   },
 });
 

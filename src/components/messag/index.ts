@@ -1,1 +1,1 @@
-export { default as Message } from './Message.tsx';
+export { default } from './Message.tsx';
