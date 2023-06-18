@@ -1,14 +1,20 @@
 import useStyles from './HomePage.styles.ts';
 import tomato from '../../assets/images/Tomato.png';
 import pizzaHero from '../../assets/images/PizzaHero.png';
-import { Button } from '../button';
 import DecoArrow from '../../assets/icons/DecoArrow.svg';
-import Footer from '../footer/Footer.tsx';
 import cx from 'classnames';
-import CitySelector from '../citySelector/CitySelector.tsx';
+import Button from '../../components/button';
+import CitySelector from './components/citySelector/CitySelector';
+import Footer from '../../components/footer';
+import { CityOptionType } from '../../types/location';
+import { useState } from 'react';
 
 const HomePage = () => {
   const { classes } = useStyles();
+
+  const [city, setCity] = useState<CityOptionType | null>(null);
+  const [selectCityError, setSelectCityError] = useState<string | null>(null);
+
   return (
     <>
       <section className={cx(classes.section, classes.heroSection)}>
@@ -84,7 +90,11 @@ const HomePage = () => {
         </div>
         <div className={classes.subheader3}>
           <div className={classes.citySelectorLabel}>Wybierz Miasto</div>
-          <CitySelector/>
+          <CitySelector
+            city={city}
+            setCity={setCity}
+            selectCityError={selectCityError}
+            setSelectCityError={setSelectCityError}/>
         </div>
         <div className={cx(classes.contactContainer)}>
           <div className={classes.header3}>Współpracjuj z nami!</div>

@@ -24,15 +24,43 @@ const styles = ({
     lineHeight: '18px',
     borderRadius: 'theme.spacing(0, 2, 2, 0)',
   },
+  textFieldRoot: {
 
+  },
   leftAdornment: {
     color: '#FFFFFF',
     marginRight: 'theme.spacing(1)',
     borderColor: 'white',
+    fontSize: 19,
+    cursor: 'pointer',
+  },
+  tooltip: {
+    padding: '10px 15px',
+    color: '#F7F7F7',
+    fontSize: 14,
+    fontWeight: 400,
+    lineHeight: '1.25',
+    letterSpacing: '0.01em'
+  },
+  helperText: {
+    color: '#F7F7F7',
+  },
+  rightAdornmentIconsContainer: {
+    marginLeft: 'theme.spacing(1)',
+    display: 'flex',
+    gap: 5,
+    alignItems: 'center',
+    color: '#FFFFFF',
+    fontSize: 19,
+  },
+  clearIcon: {
+    cursor: 'pointer',
   },
   rightAdornment: {
+    padding: 'unset',
+    fontSize: 19,
     color: '#FFFFFF',
-    marginLeft: 'theme.spacing(1)',
+    cursor: 'pointer',
   },
   subtitle: {
     fontStyle: 'normal',
@@ -62,12 +90,10 @@ const styles = ({
     margin: '5px 10px',
   },
   optionName: {
-    fontWeight: ''
   },
   optionDescription: {
-
   },
-  errorBox: {
+  messageBox: {
     minHeight: '15px',
     marginTop: '5px',
     display: 'flex',
@@ -76,12 +102,21 @@ const styles = ({
     justifyContent: 'flex-end',
     alignItems: 'center',
     fontSize: '12px',
-    color: 'red'
 
   },
-  errorIcon: {
-    fontSize: '12px',
+  errorBox: {
+    color: 'red',
     fill: 'red',
+  },
+  errorIcon: {
+    fontSize: 'inherit'
+  },
+  infoBox: {
+    color: 'yellow',
+    fill: 'yellow',
+  },
+  infoIcon: {
+    fontSize: 'inherit'
   },
 
 });
